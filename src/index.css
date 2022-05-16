@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(29, 14, 5);
+    color: white;
+    padding: 0 20px;
+}
+
+.nav--logo img {
+    width: 80px;
+}
+
+.nav--nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav--nav li {
+    margin: 0 10px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    background: rgba(248, 211, 211, 0.521);
+    border: 1px solid rgb(248, 199, 199);
+    border-radius: 10px;
+    margin: 50px auto;
+
+}
+
+.body {
+    flex-grow: 1;
+}
+
+.navleft {
+    width: 30%;
+}
+
+.body--content {
+    padding: 0 !important;
+}
+
+.body--content,
+.navleft--navleft {
+    background: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px 10px;
+}
+
+.navleft--navleft ul {
+    list-style: none;
+}
+
+.navleft--navleft ul li {
+    border-bottom: 1px solid red;
+    /* margin-top: 1rem; */
+    padding: 1rem;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+
+.navleft--navleft ul li:hover {
+    background: rgb(228, 219, 219);
+}
+
+.navleft--navleft ul .useEffect {
+    text-align: left;
+}
+
+.active {
+    background: rgb(228, 219, 219);
+}
+
+.body--content .topHeading {
+    background: rgba(128, 128, 128, 0.219);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-indent: 10px;
+}
+
+.body--body {
+    padding: 20px;
+}
+
+.count {
+    text-align: center;
+    margin: 20px;
+}
+
+.count span {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.count .incr {
+    background: green;
+}
+
+.count .reset {
+    background: gray;
+}
+
+.count .decr {
+    background: red;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.btns button {
+    margin: 0 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: ease-out .5s;
+    cursor: pointer;
+}
+
+.decr {
+    background: red;
+    color: white;
+}
+
+.reset {
+    background: rgb(216, 202, 13);
+    color: black;
+}
+
+.incr {
+    background: green;
+    color: white;
+}
+
+.btns button:hover {
+    opacity: .9;
+    transform: scale(1.1);
+}
+
+.useEffect {
+    text-align: center;
+    padding: 10px;
+}
+
+.useEffect .img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(223, 130, 130);
+    border-radius: 50px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.useEffect .img img {
+    width: 100%;
+}
+
+.useEffect .details {
+    margin-top: 20px;
+}
+
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 5px;
+}
