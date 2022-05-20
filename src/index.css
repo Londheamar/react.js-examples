@@ -501,3 +501,18 @@
 .noteApp--container{
         border: 1px solid rgb(197, 193, 193);
 }
+
+@media only screen and (max-width:550px){
+
+.mainBody{
+width: 100%;
+flex-direction: column;
+}
+.mainbox {
+  width: 100%;
+}
+.navleft {
+  width: 100%;
+}
+
+}
