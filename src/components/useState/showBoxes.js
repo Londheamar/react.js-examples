@@ -16,5 +16,10 @@ export const ShowBoxes = () => {
     <Box key={box.id} id={box.id} on={box.on} toggle={toggleBox} />
   ));
 
-  return <>{boxe}</>;
+  return (
+    <div className="useState--Box">
+      <p className="">onClick change the state and update the color of box.</p>
+      {boxe}
+    </div>
+  );
 };

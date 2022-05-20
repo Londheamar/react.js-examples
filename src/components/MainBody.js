@@ -12,22 +12,24 @@ export const MainBody = () => {
     componentsList[comp] !== undefined
       ? setComp(componentsList[comp])
       : setComp(componentsList.error);
-    document.getElementsByClassName(comp)[0].classList.add("active");
+    document
+      .getElementsByClassName(comp)[0]
+      .classList.add("navleft--link--active");
     setClass(comp);
   };
 
   // update remove active class from other li
   useEffect(() => {
-    let elem = document.querySelectorAll(".navleft--navleft li");
+    let elem = document.querySelectorAll(".navleft--links li");
     for (let i = 0; i < elem.length; i++) {
       if (!elem[i].classList.value.includes(className)) {
-        elem[i].classList.remove("active");
+        elem[i].classList.remove("navleft--link--active");
       }
     }
   });
 
   return (
-    <div className="main">
+    <div className="mainBody">
       <NavLeft
         list={Object.keys(componentsList)}
         updateComponent={updateComponent}

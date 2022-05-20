@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
 }
-
-.nav {
+ 
+.topnav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,22 +12,22 @@
     padding: 0 20px;
 }
 
-.nav--logo img {
+.topnav--logo img {
     width: 80px;
 }
 
-.nav--nav ul {
+.topnav--links ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav--nav li {
+.topnav--links li {
     margin: 0 10px;
 }
 
-.main {
+.mainBody {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -39,31 +39,33 @@
 
 }
 
-.body {
+.mainbox {
     flex-grow: 1;
+    width: 70%;
 }
 
 .navleft {
     width: 30%;
 }
 
-.body--content {
+.mainbox--content {
     padding: 0 !important;
 }
 
-.body--content,
-.navleft--navleft {
+.mainbox--content,
+.navleft--links {
     background: white;
     border-radius: 10px;
     margin: 10px;
     padding: 20px 10px;
+    text-transform: capitalize;
 }
 
-.navleft--navleft ul {
+.navleft--links ul {
     list-style: none;
 }
 
-.navleft--navleft ul li {
+.navleft--links ul li {
     border-bottom: 1px solid red;
     /* margin-top: 1rem; */
     padding: 1rem;
@@ -71,19 +73,19 @@
     transition: all ease-in-out .5s;
 }
 
-.navleft--navleft ul li:hover {
+.navleft--links ul li:hover {
     background: rgb(228, 219, 219);
 }
 
-.navleft--navleft ul .useEffect {
+.navleft--links ul .useEffect {
     text-align: left;
 }
 
-.active {
+.navleft--link--active {
     background: rgb(228, 219, 219);
 }
 
-.body--content .topHeading {
+.mainbox--content .topHeading {
     background: rgba(128, 128, 128, 0.219);
     padding: 10px;
     border-radius: 10px 10px 0 0;
@@ -92,41 +94,32 @@
     text-indent: 10px;
 }
 
-.body--body {
+.mainbox--body {
     padding: 20px;
 }
+/* ======================================================== */
+/* Counter */
 
-.count {
+.counter--box {
     text-align: center;
     margin: 20px;
 }
 
-.count span {
+.counter--count span {
     padding: 10px;
     color: white;
     border-radius: 10px;
 }
 
-.count .incr {
-    background: green;
-}
-
-.count .reset {
-    background: gray;
-}
-
-.count .decr {
-    background: red;
-}
-
-.btns {
+.counter--btns {
     display: flex;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-.btns button {
+.counter--box .counter--btns button {
     margin: 0 10px;
     border: none;
     padding: 10px;
@@ -135,32 +128,71 @@
     cursor: pointer;
 }
 
-.decr {
+.counter--box .decr {
     background: red;
     color: white;
 }
 
-.reset {
+.counter--box .reset {
     background: rgb(216, 202, 13);
     color: black;
 }
 
-.incr {
+.counter--box .incr {
     background: green;
     color: white;
 }
 
-.btns button:hover {
+.counter--btns button:hover {
     opacity: .9;
     transform: scale(1.1);
 }
 
-.useEffect {
-    text-align: center;
-    padding: 10px;
+/* =========================================================== */
+/*  useState */
+
+.useState--Box{
+    padding: 15px;
+}
+.useState--Box p {
+    margin-bottom: 15px;
+}
+.useState--Box .box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* =================================================== */
+/* useEffect */
+
+.useEffect .p{
+    margin-bottom: 20px;
 }
 
-.useEffect .img {
+.useEffect--github,
+.useEffect--other {
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.useEffect--github--heading,
+.useEffect--other--heading{
+    text-align: left;
+    background: beige;
+    padding: 15px 10px;
+    border-bottom: 1px solid gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.useEffect--github--body,
+.useEffect--other--body{
+    padding: 10px;
+}
+.useEffect--github .img {
     width: 100px;
     height: 100px;
     border: 2px solid rgb(223, 130, 130);
@@ -169,20 +201,303 @@
     margin: auto;
 }
 
-.useEffect .img img {
+.useEffect--github .img img {
     width: 100%;
 }
 
-.useEffect .details {
+.useEffect--github .details {
     margin-top: 20px;
 }
+.useEffect--other--body .details{
+    text-align: left;
+}
+/* =============================================================== */
+/* sign up form  */
+.signup--main{
+    width: 100%;
+    height: 100%;
+    background: #639;
+}
+.signup--container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.signup--container .signup--form {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
+}
 
-.box {
-    height: 100px;
-    width: 100px;
-    border: 1px solid black;
-    display: inline-block;
-    margin-right: 4px;
+.signup--form--input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
     border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.signup--form--submit-btn {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #639;
+    border: none;   
+    cursor: pointer; 
+}
+
+.form--marketing {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form--marketing > input {
+    margin-right: 10px;
+}
+/* ======================================================== */
+/* Meme */
+.membox{padding: 20px;}
+
+.membox--header {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 10px;
+}
+
+.membox--header--image {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.membox--header--title {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+.membox--header--project {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.membox--main {
+    padding: 36px 0;
+    width: 100%;
+}
+.membox--form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+}
+
+.membox--form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.membox--form--button {
+    grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.membox--meme--image{height: 400px;position: relative;margin-top: 10px;}
+.membox--meme--image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.membox--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.membox--text.bottom {
+    bottom: 0;
+}
+
+.membox--text.top {
+    top: 0;
+}
+
+/* ================================================================ */
+/* dark night mode  */
+
+.darkNight--container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(197, 193, 193);
+}
+
+.darkNight--nav {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 12px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    transition: all ease-in-out .5s;
+}
+
+.darkNight--nav.dark {
+    background-color: #21222A;
+}
+
+.darkNight--nav--logo_icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.darkNight--nav--logo_text {
+    color: #61DAFB;
+    margin-right: auto;
+}
+
+.darkNight--nav--title {
+    color: #DEEBF8;
+}
+
+.darkNight--toggler {
+    display: flex;
+    align-items: center;
+}
+
+.darkNight--toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.darkNight--toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+.darkNight--nav.dark .darkNight--toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.darkNight--toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.darkNight--nav.dark .darkNight--toggler--slider--circle {
+    background-color: red;
+}
+
+.darkNight--toggler--light {
+    color: #2B283A;
+}
+
+.darkNight--nav.dark .darkNight--toggler--light {
+    color: #918E9B;
+}
+
+.darkNight--toggler--dark {
+    color: #D5D4D8;
+}
+
+.darkNight--nav.dark .darkNight--toggler-dark {
+    color: #FFFFFF;
+}
+
+.darkNight--nav.dark .darkNight--toggler--slider {
+    justify-content: flex-end;
+}
+
+.darkNight--main {
+    padding: 57px 27px;
+    background-image: url("./react-icon-light.png"); 
+    background-repeat: no-repeat;
+    background-position: right center;
+    flex: 1 1 auto;
+    background-color: white;
+    color: #2B283A;
+    transition: all ease-in-out .5s;
+
+}
+
+.darkNight--main.dark {
+    background-image: url("./react-icon-dark.png"); 
+    background-color: #282D35;
+    color: white;    
+}
+
+.darkNight--title {
+    margin: 0;
+    font-size: 39px;
+    letter-spacing: -0.05em;
+}
+
+.darkNight--facts {
+    margin-top: 46px;
+    max-width: 400px;
+}
+
+.darkNight--facts > li {
+    line-height: 19px;
+    padding-block: 10px;
+}
+
+.darkNight--facts > li::marker {
+    font-size: 1.4rem;
+    color: #61DAFB;
+}
+
+/* =============================================================== */
+/* Note app */
+
+.noteApp--container{
+        border: 1px solid rgb(197, 193, 193);
 }

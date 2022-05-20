@@ -3,11 +3,11 @@ import Logo from "../londhe-amar-logo.png";
 
 export const Navbar = () => {
   return (
-    <div className="nav">
-      <div className="nav--logo">
+    <div className="topnav">
+      <div className="topnav--logo">
         <img src={Logo} alt="Logo" />
       </div>
-      <div className="nav--nav">
+      <div className="topnav--links">
         <ul>
           <li>link 1</li>
           <li>link 2</li>

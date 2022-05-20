@@ -12,11 +12,11 @@ export const Counter = () => {
     counterClass = "decr";
   }
   return (
-    <div>
-      <div className="count">
+    <div className="counter--box">
+      <div className="counter--count">
         <span className={counterClass}>{number}</span>
       </div>
-      <div className="btns">
+      <div className="counter--btns">
         <button className="decr" onClick={() => setNumber(number - 1)}>
           Decrease
         </button>
